@@ -1,0 +1,18 @@
+{
+  "name": "cudo-backend-test",
+  "version": "1.0.0",
+  "description": "Back-end test for Cudo Ventures",
+  "main": "index.js",
+  "author": "Joe White <joe.white@cudoventures.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^8.3.2",
+    "mysql": "^2.18.1",
+    "web3": "^1.3.6"
+  },
+  "scripts": {
+    "dev": "docker-compose run withdrawals",
+    "seed": "docker-compose run seed",
+    "test": "LOG_LEVEL=silent NODE_ENV=test mocha -c -t 20000 test/**"
+  }
+}
